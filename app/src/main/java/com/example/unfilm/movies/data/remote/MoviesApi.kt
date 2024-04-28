@@ -1,11 +1,12 @@
 package com.example.unfilm.movies.data.remote
 
+import com.example.unfilm.movies.data.remote.response.MovieListDto
 import retrofit2.http.GET
 
 interface MoviesApi {
 
-//    @GET
-//    suspend fun getPopularMovies():
+    @GET
+    suspend fun getPopularMovies(): MovieListDto
 
     companion object {
         const val POPULAR_MOVIE_BASE_URL = "https://api.themoviedb.org/3/movie/popular/"

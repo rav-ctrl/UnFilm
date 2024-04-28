@@ -14,8 +14,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         lifecycleScope.launch {
-            val lol = MovieListRepositoryImpl.getPopularMovies()
-            println(lol)
+            MovieListRepositoryImpl.getPopularMovies().collect {
+                println(it)
+            }
         }
     }
 }

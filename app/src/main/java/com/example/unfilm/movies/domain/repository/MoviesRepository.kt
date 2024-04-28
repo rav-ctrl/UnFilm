@@ -5,6 +5,6 @@ import java.util.concurrent.Flow
 
 interface MoviesRepository {
 
-    fun getPopularMovies(): MovieListDto
+    suspend fun getPopularMovies(): MovieListDto
 
 }
